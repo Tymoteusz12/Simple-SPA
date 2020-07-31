@@ -1,0 +1,503 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    color: darkorange;
+    height: 100vh;
+    transition: 0s 2s;
+    overflow: hidden;
+}
+
+
+
+.arrow{
+    position: fixed;
+    color: black;
+    width: 10vw;
+    height: 10vw;
+    text-align: center;
+    transition: .4s linear;
+    z-index: 10;
+    font-size: 5vw;
+    top: 6%;
+    right: 0%;
+    text-shadow: 0px 0px 25px yellow;   
+    animation: breathe 8s linear both infinite;
+    overflow: hidden;
+}
+
+.arrow i{
+    line-height: 10vw;
+}
+
+.arrow.show{
+    position: fixed;
+    color: black;
+    text-shadow: 0px 0px 25px green;
+    transform: rotate(180deg);
+}
+
+.menu{
+    display: flex;
+    z-index: 9;
+    position: fixed;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-top-left-radius: 80px 50px;
+    border-bottom-left-radius: 80px 50px;
+    top: 5%;
+    right: -10vw;
+    width: 10vw;
+    height: 70vh;
+    background-color: yellow;
+    box-shadow: 0px 0px 2px 2px darkred;
+    transition: .4s linear;
+}
+
+.menu .menu_icons{
+    color: black;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    top: 25%;
+    width: 10vw;
+    height: 5vw;
+    line-height: 5vw;
+    font-size: 3vw;
+}
+
+.menu .menu_icons:hover{
+    cursor: pointer;
+}
+
+.menu .fas{
+    right: -1vw;
+    width: 8vw;
+    height: 5vw;
+    border-bottom: 3px solid black;
+}
+
+.menu #user{
+    border-bottom: 0;
+}
+
+.menu.show{
+    right: 0px;
+}
+
+.arrow:hover{
+    cursor: pointer;
+}
+
+.head{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: black;
+    height: 100vh;
+}
+
+
+.head h1{
+    padding-left: 10%;
+    padding-top: 0%;
+    font-size: 12vw;
+    line-height: 0;
+    letter-spacing: 1vw;
+    color: darkorange;
+    text-shadow: 0px 0px 20px darkred;
+}
+
+.head .bottom{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.next_page{
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: breathe_button 8s linear both infinite;
+    transition: .4s linear;
+    background-image: linear-gradient(135deg, red 0%, yellow 80%);
+}
+
+.next_page:hover{
+    cursor: pointer;
+}
+
+.head .left_p{
+    position: absolute;
+    text-align: center; 
+    width: 50vw;
+    font-size: 2em;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.head .border_mid{
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    border-bottom: 2px solid orange;
+    box-shadow: 0px 0px 5px 1px darkred;
+}
+
+.head .right_p{
+    position: absolute;
+    text-align: center;
+    width: 60vw;
+    font-size: 2em;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.weird, .w_twinkle, .e_twinkle, .l_twinkle, .right_p, .left_p, .head{
+    z-index: 1;
+}
+
+span.com{
+    position: relative;
+}
+
+.border_mid, span.com{
+    z-index: 3;
+}
+
+.head h1 .weird{
+    position: absolute;
+    transform-origin: 3.5vw 4vw;
+    animation: broken 4s linear both;
+}
+
+
+.head h1 .w_twinkle{
+    animation: w_twinkle 8s 3s linear infinite;
+}
+
+.head h1 .e_twinkle{
+    animation: e_twinkle 8s 3s linear infinite;
+}
+
+.head h1 .l_twinkle{
+    animation: l_twinkle 10s 3s linear infinite;
+}
+
+@keyframes breathe{
+    0%{
+        text-shadow: 0px 0px 0px green;
+    }
+
+    30%{
+        text-shadow: 0px 0px 10px green;
+    }
+
+    60%{
+        text-shadow: 0px 0px 10px green;
+    }
+    90%{
+        text-shadow: 0px 0px 0px green;
+    }
+
+    100%{
+        text-shadow: 0px 0px 0px green;
+    }
+}
+
+@keyframes breathe_button{
+    0%{
+        box-shadow: 0px 0px 0px red;
+    }
+
+    30%{
+        box-shadow: 0px 0px 60px red;
+    }
+
+    60%{
+        box-shadow: 0px 0px 60px red;
+    }
+    90%{
+        box-shadow: 0px 0px 0px red;
+    }
+
+    100%{   
+        box-shadow: 0px 0px 0px red;
+    }
+}
+
+@keyframes broken{
+    0%{
+        transform: rotate(0deg);
+        color: darkorange;
+        text-shadow: 0px 0px 20px darkred;
+    }
+    5%{
+        transform: rotate(10deg);
+        color: black;
+        text-shadow: 0 0 0;
+    }
+    6%{
+        color: darkorange;
+        text-shadow: 0px 0px 20px darkred;
+    }
+    7%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+    10%{
+        transform: rotate(30deg);
+        color: black;
+        text-shadow: 0 0 0;
+    }
+    11%{
+        color: darkorange;
+        text-shadow: 0px 0px 20px darkred;
+    }
+    12%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+    85%{
+        color: black;
+        text-shadow: 0 0 0;
+        transform: rotate(160deg);
+    }
+    90%{
+        color: darkorange;
+        text-shadow: 0px 0px 20px darkred;
+        transform: rotate(190deg);
+    }
+    91%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+    95%{
+        color: darkorange;
+        text-shadow: 0px 0px 20px darkred;
+        transform: rotate(184deg);
+    }
+    100%{
+        transform: rotate(180deg);
+        color: black;
+        text-shadow: 0 0 0;
+    }
+} 
+
+@keyframes w_twinkle{
+    1%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+
+    3%{
+        color: darkorange;
+        text-shadow: 0px 0px 20px darkred; 
+    }
+
+    4%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+    5%{
+        color: darkorange;
+        text-shadow: 0px 0px 50px darkred; 
+    }
+
+    6%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+
+    7%{
+        color: darkorange;
+        text-shadow: 0px 0px 50px darkred; 
+    }
+
+    9%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+
+    12%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+
+    15%{
+        color: darkorange;
+        text-shadow: 0px 0px 50px darkred;
+    }
+
+    16%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+
+    50%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+    55%{
+        color: darkorange;
+        text-shadow: 0px 0px 50px darkred;
+    }
+
+    100%{
+        color: darkorange;
+        text-shadow: 0px 0px 50px darkred;
+    }
+
+}
+
+@keyframes e_twinkle{
+    3%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+
+    4%{
+        color: darkorange;
+        text-shadow: 0px 0px 20px darkred; 
+    }
+
+    5%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+    6%{
+        color: darkorange;
+        text-shadow: 0px 0px 50px darkred; 
+    }
+
+    8%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+
+    9%{
+        color: darkorange;
+        text-shadow: 0px 0px 50px darkred; 
+    }
+
+    10%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+
+    12%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+
+    15%{
+        color: darkorange;
+        text-shadow: 0px 0px 50px darkred;
+    }
+
+    16%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+
+    60%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+    65%{
+        color: darkorange;
+        text-shadow: 0px 0px 50px darkred;
+    }
+
+    67%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+    68%{
+        color: darkorange;
+        text-shadow: 0px 0px 50px darkred;
+    }
+
+    100%{
+        color: darkorange;
+        text-shadow: 0px 0px 50px darkred;
+    }
+}
+
+@keyframes l_twinkle{
+    1%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+
+    2%{
+        color: darkorange;
+        text-shadow: 0px 0px 20px darkred; 
+    }
+
+    3%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+    4%{
+        color: darkorange;
+        text-shadow: 0px 0px 50px darkred; 
+    }
+
+    5%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+
+    6%{
+        color: darkorange;
+        text-shadow: 0px 0px 50px darkred; 
+    }
+
+    7%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+
+    80%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+    85%{
+        color: darkorange;
+        text-shadow: 0px 0px 50px darkred;
+    }
+
+    87%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+    88%{
+        color: darkorange;
+        text-shadow: 0px 0px 50px darkred;
+    }
+
+    89%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+    90%{
+        color: darkorange;
+        text-shadow: 0px 0px 50px darkred;
+    }
+
+    100%{
+        color: darkorange;
+        text-shadow: 0px 0px 50px darkred;
+    }
+}
+
