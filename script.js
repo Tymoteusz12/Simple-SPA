@@ -29,24 +29,27 @@ function returnToHome(){
     $('#weird').addClass('weird');
     $(document).scrollTop(0);
 }
-const windowHeight = window.screen.height;
+const windowHeight = $(window).height();
 $('.menu .fa-home').on('click', returnToHome);
 function showSkills(){
     
     const scrollValue = $(document).scrollTop();
     console.log(scrollValue); 
-        if(scrollValue > windowHeight/6){
+        if(scrollValue >  $('.python').offset().top - windowHeight/2){
             $('.crucial div:nth-child(3)').addClass('active');
         }
-        if(scrollValue > windowHeight){
+        if(scrollValue > $('.js').offset().top - windowHeight/2){
             $('.crucial div:nth-child(4), .crucial div:nth-child(5)').addClass('active');
         }
-        if(scrollValue > windowHeight/0.6){
+        if(scrollValue > $('.htmlcss').offset().top - windowHeight/2){
             $('.crucial div:nth-child(6), .crucial div:nth-child(7)').addClass('active');
         }
 
-        if(scrollValue > windowHeight/0.45){
+        if(scrollValue > $('.git').offset().top - windowHeight/2){
             $('.crucial div:nth-child(8)').addClass('active');
+        }
+
+        if(scrollValue > $('.arch').offset().top - windowHeight/1.5){
             $('.next_page').css('z-index', ('3'));
         }
         else{
