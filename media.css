@@ -1,28 +1,27 @@
 @media (max-width: 768px) and (max-height: 1023px){
+    .head h1{
+        padding-top: 5%;
+    }
     .arrow{
         width: 12vw;
         height: 12vw;
         font-size: 6vw;
     }
-
     .menu{
         height: 60vh;
         right: -12vw;
         width: 12vw;
     }
-
     .menu .menu_icons{
         width: 10vw;
         height: 8vw;
         line-height: 8vw;
         font-size: 4vw;
     }
-
     .head .left_p{
-        top: 40%;
+        top: 30%;
         font-size: 1em;
     }
-
     .head .right_p{
         top: 65%;
         font-size: 1em;
@@ -30,21 +29,21 @@
     .head .border_mid{
         top: 55vh;
     }
-
     .next_page{
         width: 15vw;
         height: 15vw;
     }
 
-    .crucial h1{
-        font-size: 2.7em;
+    .crucial{
+        height: 360vh;
     }
+
     .crucial img{
         height: 60%;
     }
 
     .crucial .bgc{
-        width: 200px;
+        width: 150px;
     }
 
     .crucial p{
@@ -52,11 +51,38 @@
     }
 
     .crucial .txt{
-        width: calc(100% - 200px);
+        width: calc(100% - 150px);
     }
 }
 
-@media (max-width: 320px) and (max-height: 480px){
+@media (max-width: 481px) and (max-height: 768px){
+    .head h1{
+        padding-top: 5%;
+    }
+    .next_page{
+        width: 18vw;
+        height: 18vw;
+    }
+    
+    .crucial{
+        height: 420vh;
+    }
+
+    .crucial .cpp, .crucial .python,.crucial .js, .crucial .htmlcss, .crucial .arch, crucial .python, .crucial .react, .crucial .git{
+        height: 30vh;
+    }
+    .crucial h1{
+        font-size: 2.7em;
+    }
+    .crucial img{
+        height: 50%;
+    }
+    .crucial p{
+        font-size: 0.6em;
+    }
+}
+
+@media (max-width: 321px) and (max-height: 481px){
     .head h1{
         padding-top: 5%;
     }
@@ -64,28 +90,39 @@
         top: 30%;
         font-size: 1em;
     }
-
     .head .border_mid{
         top: 60vh;
     }
 
-    .crucial h1{
-        font-size: 2.5em;
-    }
     .crucial img{
         height: 50%;
     }
 
     .crucial .bgc{
-        width: 70px;
+        width: 100px;
     }
 
     .crucial p{
-        font-size: 0.5em;
+        font-size: 0.55em;
     }
 
     .crucial .txt{
-        width: calc(100% - 70px);
+        width: calc(100% - 100px);
+    }
+}
+
+@media (max-width: 300px) and (max-height: 700px){
+    .crucial img{
+        height: 40%;
+    }
+    .crucial .bgc{
+        width: 110px;
+    }
+    .crucial p{
+        font-size: 0.6em;
+    }
+    .crucial .txt{
+        width: calc(100% - 110px);
     }
 }
 
@@ -93,7 +130,9 @@
     .head h1{
         padding-top: 5%;
     }
-
+    .head {
+        font-size: 1.3em;
+    }
     .menu{
         height: 50vh;
         right: -12vw;
@@ -113,8 +152,11 @@
     }
 
     .crucial h1{
-        font-size: 2.7em;
+        font-size: 2.5em;
     }
 
+    .crucial p{
+        font-size: 1.3em;
+    }
 }
 

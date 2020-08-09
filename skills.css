@@ -16,6 +16,7 @@ span.com.active{
 
 .crucial{
     position: absolute;  
+    overflow: hidden;
     width: 100vw;
     height: 340vh;
     z-index: 2;
