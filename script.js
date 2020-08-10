@@ -5,13 +5,25 @@
         thirdPageActive: false
     };
 
-    function toggleThirdPage(){
-        states.thirdPageActive = true;
+    function clearStates(){
+        for(let key in states){
+            states[key] = false;
+        }
     }
 
-    function toggleSecondPage(){
+    function clearFirstPage(){
         $('.crucial').removeClass('active');
-        states.secondPageActive = true;
+        $('.com').removeClass('active');
+        $('.border_mid').removeClass('active');
+        $(document).scrollTop(0);
+    }
+
+    function clearSecondPage(){
+        $('.passion').removeClass('active');
+    }
+
+    function clearThirdPage(){
+        $('.info').removeClass('active');
     }
 
     function toggleFirstPage(){
@@ -20,13 +32,44 @@
         $('.com').addClass('active');
         $('.border_mid').addClass('active');
         $('body').addClass('active');
-        $('#weird').removeClass('weird');
+        $('#weird').addClass('weird');
         $(document).scrollTop(0);
+        clearSecondPage();
+        clearThirdPage();
         states.firstPageActive = true;
+    }
+    
+    function toggleSecondPage(){
+        $('.passion').addClass('active'); 
+        $(document).scrollTop(0);
+        setTimeout( () => clearFirstPage(), 500);
+        setTimeout( () => clearThirdPage(), 500);
+        clearStates();
+        states.secondPageActive = true;
+    }
+
+    function toggleThirdPage(){
+        $('.info').addClass('active');
+        clearFirstPage();
+        clearSecondPage();
+        clearStates();
+        states.thirdPageActive = true;
+    }
+
+    function returnToHome(){
+        clearFirstPage();
+        if(states.secondPageActive){
+            clearSecondPage();
+        }
+        else if(states.thirdPageActive){
+            clearThirdPage();
+        }
+        $(document).scrollTop(0);
+        clearStates();
     }
 
     function nextPage(){
-        if(!states.firstPageActive){
+        if(!states.firstPageActive && !states.secondPageActive && !states.thirdPageActive){
             toggleFirstPage();
         }
         else if(states.firstPageActive){   
@@ -35,11 +78,9 @@
         else if(states.secondPageActive){
             toggleThirdPage();
         }
-    }
-
-    function setupSecondPage(){
-        $('.crucial').removeClass('active');
-        console.log('pressed');
+        else{
+            returnToHome();
+        }
     }
 
     $('.next_page').on('click', nextPage);
@@ -52,26 +93,12 @@
 
     $('.arrow').on('click', showMenu);
 
-    function clearStates(){
-        for(let key in states){
-            states[key] = false;
-        }
-    }
-
-    function returnToHome(){
-        clearStates();
-        $('.crucial').removeClass('active');
-        $('.crucial div:nth-child(2)').removeClass('active');
-        $('.com').removeClass('active');
-        $('.border_mid').removeClass('active');
-        $('body').removeClass('active');
-        $('#weird').addClass('weird');
-        $(document).scrollTop(0);
-    }
+    $('.menu .fa-home').on('click', returnToHome);
+    $('.menu .fa-brain').on('click', toggleFirstPage);
+    $('.menu .fa-atom').on('click', toggleSecondPage);
+    $('.menu .fa-user-alt').on('click', toggleThirdPage);
 
     const windowHeight = $(window).height();
-    $('.menu .fa-home').on('click', returnToHome);
-
     function showSkills(){
         const scrollValue = $(document).scrollTop();
             if(scrollValue >  $('.python').offset().top - windowHeight/2){
@@ -89,7 +116,7 @@
             }
 
             if(scrollValue > $('.arch').offset().top - windowHeight/1.5){
-                $('.next_page').css('z-index', ('3'));
+                $('.next_page').css('z-index', ('9'));
             }
             else{
                 $('.next_page').css('z-index', ('1'));
