@@ -1,0 +1,95 @@
+.passion{
+    position: absolute;  
+    overflow: hidden;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 1;
+    top: -100vh;
+    left: 0;
+    opacity: 0;
+    transition: all .4s linear;
+}
+
+.passion.active{
+    top: 0;
+    left: 0;
+    opacity: 1;
+    z-index: 4;
+}
+
+.passion h1{
+    font-size: 3em;
+}
+
+.passion h2:nth-of-type(2){
+    margin-top: 5vh;
+}
+
+.passion_holder{
+    margin: auto;
+    margin-top: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 50vh;
+    box-shadow: 0 0 20px 5px red;
+}
+
+
+.passion_holder .fa-step-backward, .fa-step-forward{
+    box-shadow: 0 0 20px 5px red;
+    text-align: center;
+    color: lightgray;
+    padding: 0px 20px;
+    height: 50%;
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s linear;
+}
+
+.fa-step-backward:hover, .fa-step-forward:hover{
+    cursor: pointer;
+    box-shadow: 0 0 40px 5px red;
+}
+
+.passion_holder .img{
+    box-sizing: border-box;
+    width: 50vw;
+    height: 40vh;
+    background-image: url('../images/passions/astronomy.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.page_selectors{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 20px;
+}
+
+.selector:nth-of-type(n){
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.selector:nth-of-type(n).active{
+    background-color: white;
+}
+
+.selector:hover{
+    cursor: pointer;
+}
+
+
