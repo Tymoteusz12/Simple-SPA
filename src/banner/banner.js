@@ -1,19 +1,42 @@
+const imagesURL = {
+    1: '../images/passions/astronomy.jpg',
+    2: '../images/passions/cybersec.jpg',
+    3: '../images/passions/math.jpg',
+    4: '../images/passions/physics.jpg',
+    5: '../images/passions/programing.jpg',
+    6: '../images/passions/track.jpg',
+    7: '../images/passions/weights.jpg',
+};
+
+const bannerHeaders = {
+    1: 'Astronomy lover',
+    2: 'Cybersecurity passionate',
+    3: 'Math freak',
+    4: 'Physics researcher',
+    5: 'Programmer from vocation',
+    6: 'Ex track&field contestant',
+    7: 'Weight lifting hobbyist'
+}
+
+const bannerParagraphs = {
+    1: 'Bought my first telescope right before my 18\'s',
+    2: 'Pretty new interest. Cooperates well with web development',
+    3: 'I would like to become math student in the future',
+    4: 'I dream to get to know the universe better',
+    5: 'My programming interests include game development, artificial inteligence and cybersecurity. Also web development',
+    6: 'Due to injury, my hobby got suspended. I hope I will return soon!',
+    7: 'Replacement for track and field. I feel comfortable here!'
+}
+
     var bannerStatus = 1;
     var bannerStatusReverse;
     const bannerTimer = 3000;
     let active = false;
     let promise = false;
+    let stateLoop = false;
+    let stateReverseLoop = false;
     let currentImg = 1;
 
-    const imagesURL = {
-        1: '../images/passions/astronomy.jpg',
-        2: '../images/passions/cybersec.jpg',
-        3: '../images/passions/math.jpg',
-        4: '../images/passions/physics.jpg',
-        5: '../images/passions/programing.jpg',
-        6: '../images/passions/track.jpg',
-        7: '../images/passions/weights.jpg',
-    }
     window.onload = function(){
         bannerLoop();
     };
@@ -44,7 +67,12 @@
     }
 
     function setProperImage(divID, imgID){
-        $('#imgban' + divID).css('background-image', 'url(' + imagesURL[imgID] + ')' )
+        $('#imgban' + divID).css('background-image', 'url(' + imagesURL[imgID] + ')' );
+    }
+
+    function setProperHeaders(divID, textID){
+        $('#imgban' + divID + '_h2').text(bannerHeaders[textID]);
+        $('#imgban' + divID + '_h3').text(bannerParagraphs[textID]);
     }
 
     function findReverseBannerStatus(){
@@ -108,12 +136,23 @@
     };
 
     function bannerLoop(){
-        currentImg = currentImg+1;
-        if(currentImg >= 8 ){
-            currentImg = 1;
+        stateLoop = true;
+        if(stateReverseLoop){ /* if last action was loopReverse, then jump ahead 3 images, because */
+            currentImg += 3;
+            stateReverseLoop = false;
         }
+        else{
+            currentImg = currentImg+1;
+        }
+        if(currentImg === 8 ){
+            currentImg = 1;
+        }else if(currentImg >= 8){
+            currentImg -=7;
+        }
+
         if(bannerStatus === 1){
             setProperImage("2", currentImg);
+            setProperHeaders("2", currentImg)
             setOpacity("0", "2");
             setImgOrder("1", "2", "3");   
             setTimeout(() => {
@@ -123,6 +162,7 @@
         }
         else if(bannerStatus === 2){
             setProperImage("3", currentImg);
+            setProperHeaders("3", currentImg)
             setOpacity("0", "3");
             setImgOrder("2", "3", "1");
             setTimeout(() => { 
@@ -132,6 +172,7 @@
         }
         else if(bannerStatus === 3){
             setProperImage("1", currentImg);
+            setProperHeaders("1", currentImg)
             setOpacity("0", "1");
             setImgOrder("3", "1", "2");
             setTimeout(() => {
@@ -142,14 +183,24 @@
     }
 
     function bannerLoopReverse(){
-        currentImg -= 1;
-        if(currentImg <= 0){
+        stateReverseLoop = true;
+        if(stateLoop){
+            currentImg -= 3;
+            stateLoop = false;
+        }
+        else{
+            currentImg -= 1;
+        }
+        if(currentImg === 0){
             currentImg = 7;
         }
+        else if(currentImg < 0){
+            currentImg +=7;
+        }
         
-        console.log(currentImg); 
         if(bannerStatusReverse === 1){
             setProperImage("2", currentImg); 
+            setProperHeaders("2", currentImg)
             setOpacity("0", "2");
             setImgOrder("3", "1", "2");
             setTimeout(() => {
@@ -159,6 +210,7 @@
         }
         else if(bannerStatusReverse === 2){
             setProperImage("1", currentImg);
+            setProperHeaders("1", currentImg)
             setOpacity("0", "1");
             setImgOrder("2", "3", "1");
             setTimeout(() => {
@@ -168,6 +220,7 @@
         }
         else if(bannerStatusReverse === 3){
             setProperImage("3", currentImg); 
+            setProperHeaders("3", currentImg)
             setOpacity("0", "3");
             setImgOrder("1", "2", "3");
             setTimeout(() => {
@@ -175,5 +228,4 @@
             }, 400);
             setBannerStatus(2, 1);           
         }  
-        
     }
