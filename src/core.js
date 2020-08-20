@@ -1,6 +1,7 @@
 import {showMenu} from './menu.js';
 import { showSkills } from './secondPageOnScroll.js';
 import * as pagesToggler from './pagesToggler.js';
+import * as infoToggler from './infoToggler.js';
 //next page button
 $('.next_page').on('click', pagesToggler.nextPage);
 
@@ -15,3 +16,10 @@ $('.menu .fa-user-alt').on('click', pagesToggler.toggleThirdPage);
 
 //second page onScroll toggle
 $(window).on('scroll', showSkills);
+
+//info sliders activation
+$('.fa-user-tie').on('click', infoToggler.toggleUserTie);
+$('.fa-github').on('click', infoToggler.toggleGithub);
+//links sliders activation
+$('#portfolio').on('click', infoToggler.slidePortfolioLink);
+$('#github').on('click', infoToggler.slideGithubLink);

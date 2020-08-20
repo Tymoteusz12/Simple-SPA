@@ -178,6 +178,8 @@
     #imgban1 h3, #imgban2 h3, #imgban3 h3{
         font-size: 4vh;
     }
+
+
 }
 
 @media (max-width: 300px) and (max-height: 700px){

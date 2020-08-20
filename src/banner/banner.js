@@ -23,7 +23,7 @@ const bannerParagraphs = {
     2: 'Pretty new interest. Cooperates well with web development',
     3: 'I would like to become math student in the future',
     4: 'I dream to get to know the universe better',
-    5: 'My programming interests include game development, artificial inteligence and cybersecurity. Also web development',
+    5: 'My programming interests include game development, artificial inteligence, cybersecurity and web development',
     6: 'Due to injury, my hobby got suspended. I hope I will return soon!',
     7: 'Replacement for track and field. I feel comfortable here!'
 }

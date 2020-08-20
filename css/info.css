@@ -22,3 +22,123 @@
 .info h1{
     font-size: 3em;
 }
+
+.info .icons{
+    height: 50vh;
+    width: 70vw;
+    margin: 20vh auto;
+    display: flex; 
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.info .icons div{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 33%;
+}
+
+.info .icons i{
+    padding: 0;
+    text-align: center;
+    position: relative;
+    z-index: 20;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    color: white;
+    text-shadow: 0px 0px 5px red;
+    transition: .1s linear;
+}
+
+.info .icons div .hover_effect1, .info .icons div .hover_effect2, .info .icons div .hover_effect3{
+    position: absolute;
+    margin: auto;
+    z-index: 9;
+    background-color: white;
+    transform: translateX(calc(-100% + 64px));
+    width: 50vw;
+    height: 60%;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+.hover_effect1 h2, .hover_effect2 h2, .hover_effect3 h2{
+    width: 100%;
+    font-weight: normal;
+    color: black;
+    text-align: center;
+}
+
+
+.info .icons .pseudo::before{
+    content: "";
+    position: absolute;
+    z-index: 10;
+    background-color: black;
+    width: 45vw;
+    height: 100%;
+    transform: translateX(calc(-40vw + 64px + 10%));
+} 
+
+.info .icons i:hover{
+    cursor: pointer;
+    font-size: 76px;
+    text-shadow: 0px 0px 100px red;
+}
+
+.info .icons i:nth-of-type(n):hover + div:nth-of-type(n){
+    transform: translate(calc(5vw + 10% + 128px), 0%);
+    opacity: 0.8;
+}
+
+.info .icons div:nth-of-type(n).active{
+    transform: translate(calc(5vw + 10% + 128px), 0%);
+    opacity: 0.8;
+}
+
+span#portfolio, span#github{
+    cursor: pointer;
+    font-weight: bold;
+    transition: .3s linear;
+}
+
+span#portfolio:hover, span#github:hover{
+    text-shadow: 0px 0px 5px red;
+}
+
+.info .portfolio_slider, .info .github_slider{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    font-size: 1.5em;
+    top: 21%;
+    left: 100%;
+    width: 70%;
+    height: 5%;
+    transition: .5s ease-in-out;
+}
+
+.info .portfolio_slider.active{
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.info .github_slider{
+    top: 15%;
+}
+
+.info .github_slider.active{
+    left: 50%;
+    transform: translateX(-50%);
+}
+

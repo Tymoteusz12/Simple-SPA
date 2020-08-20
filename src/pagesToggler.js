@@ -11,6 +11,10 @@ function clearSecondPage(){
 
 function clearThirdPage(){
     $('.info').removeClass('active');
+    $('.info .portfolio_slider').removeClass('active');
+    $('.info .github_slider').removeClass('active');
+    $('.info .hover_effect1').removeClass('active');
+    $('.info .hover_effect2').removeClass('active');
 }
 
 export function toggleHomePage(){
