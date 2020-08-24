@@ -12,5 +12,4 @@ export function toggleButton(windowHeight, states){
     else if(!states.firstPageActive){
         $('.next_page').css('z-index', ('-1'));
     }
-
 }

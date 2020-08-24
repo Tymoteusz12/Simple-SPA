@@ -43,10 +43,7 @@ const bannerParagraphs = {
         if(statesModule.states.secondPageActive){
             return setInterval(() => (bannerLoop()), bannerTimer);
         }
-        else{
-            return setInterval( () => clearInterval(startBannerLoop), 5000);
-        }
-     }
+    }
 
     let startBannerLoop = setBannerInterval();
 
@@ -131,11 +128,15 @@ const bannerParagraphs = {
     };
 
     document.getElementById('banner').onmouseenter = function(){
-        clearInterval(startBannerLoop);
+        if(statesModule.states.secondPageActive){
+            clearInterval(startBannerLoop);
+        }
     };
 
     document.getElementById('banner').onmouseleave = function(){
-        startBannerLoop = setBannerInterval();
+        if(statesModule.states.secondPageActive){
+            startBannerLoop = setBannerInterval();
+        }
     };
 
     function bannerLoop(){
