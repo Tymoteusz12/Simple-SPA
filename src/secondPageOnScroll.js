@@ -1,6 +1,5 @@
 export function showSkills(windowHeight, states){
     const scrollValue = $(document).scrollTop();
-    if(states.firstPageActive){
         if(scrollValue >  $('.python').offset().top - windowHeight/2){
             $('.cpp').addClass('active');
         }
@@ -20,6 +19,5 @@ export function showSkills(windowHeight, states){
         }else{
             $('.next_page').css('z-index', ('-1'));
         }
-    }
 }
 

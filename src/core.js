@@ -2,7 +2,6 @@ import {showMenu} from './menu.js';
 import { showSkills } from './secondPageOnScroll.js';
 import * as pagesToggler from './pagesToggler.js';
 import * as infoToggler from './infoToggler.js';
-import { toggleButton } from './nextPageToggler.js';
 import * as states from './states.js';
 //next page button
 $('.next_page').on('click', pagesToggler.nextPage);
@@ -19,7 +18,6 @@ $('.menu .fa-user-alt').on('click', pagesToggler.toggleThirdPage);
 //second page onScroll toggle
 const windowHeight = $(window).height();
 $(window).on('scroll', () => showSkills(windowHeight, states.states));
-$(window).on('scroll', () => toggleButton(windowHeight, states.states));
 
 //info sliders activation
 $('.fa-user-tie').on('click', infoToggler.toggleUserTie);
