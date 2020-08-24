@@ -4,7 +4,7 @@ export function toggleButton(windowHeight, states){
     if(scrollValue > windowHeight*0.05 && states.homePageActive){
         $('.next_page').css('z-index', ('9'));
     }
-    else if(scrollValue >  windowHeight*0.2 && states.secondPageActive){
+    else if(scrollValue >  windowHeight*0.1 && states.secondPageActive){
         $('.next_page').css('z-index', ('9'));
     }else if(scrollValue >  windowHeight*0.3 && states.thirdPageActive){
         $('.next_page').css('z-index', ('9'));

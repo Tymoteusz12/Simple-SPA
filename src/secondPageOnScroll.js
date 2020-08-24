@@ -2,17 +2,17 @@
 export function showSkills(windowHeight){
     const scrollValue = $(document).scrollTop();
     if(scrollValue >  $('.python').offset().top - windowHeight/2){
-        $('.crucial div:nth-child(3)').addClass('active');
+        $('.cpp').addClass('active');
     }
     if(scrollValue > $('.js').offset().top - windowHeight/2){
-        $('.crucial div:nth-child(4), .crucial div:nth-child(5)').addClass('active');
+        $('.python, .js').addClass('active');
     }
     if(scrollValue > $('.htmlcss').offset().top - windowHeight/2){
-        $('.crucial div:nth-child(6), .crucial div:nth-child(7)').addClass('active');
+        $('.react, .htmlcss').addClass('active');
     }
 
     if(scrollValue > $('.git').offset().top - windowHeight/2){
-        $('.crucial div:nth-child(8)').addClass('active');
+        $('.arch').addClass('active');
     }
 
     if(scrollValue > $('.arch').offset().top - windowHeight/1.5){

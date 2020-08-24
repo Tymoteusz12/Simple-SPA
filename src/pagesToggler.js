@@ -65,7 +65,7 @@ export function toggleThirdPage(){
 export function returnToHome(){
     $(document).scrollTop(0);
     toggleHomePage();
-    setTimeout( () => clearFirstPage(), 500);
+    setTimeout( () => clearFirstPage(), 2000);
     clearSecondPage();
     clearThirdPage();
     statesModule.clearStates();
