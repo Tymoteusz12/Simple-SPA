@@ -1,8 +1,6 @@
-import * as stateModule from './states';
-
-export function showSkills(windowHeight){
+export function showSkills(windowHeight, states){
     const scrollValue = $(document).scrollTop();
-    if(stateModule.states.firstPageActive){
+    if(states.firstPageActive){
         if(scrollValue >  $('.python').offset().top - windowHeight/2){
             $('.cpp').addClass('active');
         }

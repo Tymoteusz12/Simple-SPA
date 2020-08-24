@@ -18,7 +18,7 @@ $('.menu .fa-user-alt').on('click', pagesToggler.toggleThirdPage);
 
 //second page onScroll toggle
 const windowHeight = $(window).height();
-$(window).on('scroll', () => showSkills(windowHeight));
+$(window).on('scroll', () => showSkills(windowHeight, states));
 $(window).on('scroll', () => toggleButton(windowHeight, states.states));
 
 //info sliders activation
