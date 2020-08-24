@@ -125,6 +125,7 @@ body{
     justify-content: flex-end;
     background-color: black;
     min-height: 110vh;
+    transition: .4s linear;
 }
 
 .head.active {
