@@ -1,4 +1,4 @@
-import * as statesModule from '../states';
+import * as statesModule from '../states.js';
 
 const imagesURL = {
     1: 'images/passions/astronomy.jpg',
@@ -44,7 +44,7 @@ const bannerParagraphs = {
             return setInterval(() => (bannerLoop()), bannerTimer);
         }
         else{
-            clearInterval(startBannerLoop);
+            return setInterval( () => clearInterval(startBannerLoop), 5000);
         }
      }
 
