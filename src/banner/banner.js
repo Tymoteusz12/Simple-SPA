@@ -1,11 +1,11 @@
 const imagesURL = {
-    1: './images/passions/astronomy.jpg',
-    2: './images/passions/cybersec.jpg',
-    3: './images/passions/math.jpg',
-    4: './images/passions/physics.jpg',
-    5: './images/passions/programing.jpg',
-    6: './images/passions/track.jpg',
-    7: './images/passions/weights.jpg',
+    1: 'Tymoteusz12.github.io./images/passions/astronomy.jpg',
+    2: 'Tymoteusz12.github.io./images/passions/cybersec.jpg',
+    3: 'Tymoteusz12.github.io./images/passions/math.jpg',
+    4: 'Tymoteusz12.github.io.//images/passions/physics.jpg',
+    5: 'Tymoteusz12.github.io.//images/passions/programing.jpg',
+    6: 'Tymoteusz12.github.io.//images/passions/track.jpg',
+    7: 'Tymoteusz12.github.io.//images/passions/weights.jpg',
 };
 
 const bannerHeaders = {
