@@ -21,7 +21,8 @@
 }
 
 .passion h1{
-    margin-top: 50px;
+    width: 80%;
+    margin: 50px auto;
     font-size: 48px;
 }
 
