@@ -12,7 +12,7 @@ export function showSkills(windowHeight){
     }
 
     if(scrollValue > $('.git').offset().top - windowHeight/2){
-        $('.arch').addClass('active');
+        $('.git, .arch').addClass('active');
     }
 
     if(scrollValue > $('.arch').offset().top - windowHeight/1.5){
