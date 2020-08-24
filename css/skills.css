@@ -24,6 +24,7 @@ span.com.active{
     left: 0;
     transform: translateY(-100%);
     opacity: 0;
+    transition: .4s linear;
 }
 
 .crucial.active{
