@@ -4,7 +4,6 @@ body{
     margin: 0;
     color: darkorange;
     background-color: black;
-    height: 100vh;
     transition: 0s 2s;
 }
 
@@ -14,15 +13,14 @@ body{
     align-items: center;
     position: fixed;
     color: black;
-    width: 10vw;
-    height: 10vw;
+    min-width: 64px;
+    min-height: 64px;
     text-align: center;
-    transition: .4s linear;
+    transition: .2s linear;
     z-index: 11;
-    font-size: 4vw;
+    font-size: 42px;
     top: 6%;
     right: 0%;
-    text-shadow: 0px 0px 25px yellow;   
     animation: breathe 8s linear both infinite;
     overflow: hidden;
 }
@@ -39,16 +37,12 @@ body{
     z-index: 9;
     position: fixed;
     flex-direction: column;
-    justify-content: flex-start;
-    border-top-left-radius: 80px 50px;
-    border-bottom-left-radius: 80px 50px;
-    top: 5%;
-    right: -10vw;
-    width: 10vw;
-    height: 70vh;
+    justify-content: center;
+    right: -300px;
+    min-height: 100vh;
     background-color: yellow;
     box-shadow: 0px 0px 2px 2px darkred;
-    transition: .4s linear;
+    transition: .2s linear;
 }
 
 .menu .menu_icons{
@@ -56,19 +50,61 @@ body{
     padding: 0;
     text-align: center;
     position: relative;
-    top: 25%;
-    width: 8vw;
-    height: 6vw;
-    line-height: 6vw;
-    font-size: 3vw;
+    font-size: 46px;
+    min-width: 300px;
+    padding: 46px 0px;
 }
 
 .menu .menu_icons:hover{
     cursor: pointer;
 }
 
+#question{
+    position: absolute;
+    z-index: 50;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    top: 2%;
+    left: 2%;
+    color: black;
+    background-color: gray;
+    font-size: 32px;
+    transition: .2s linear;
+    cursor: pointer;
+}
+
+#question:hover{
+    font-size: 42px;
+}
+
+.page_build_info{
+    position: absolute;
+    background-color: gray;
+    color: black;
+    font-size: 24px;
+    padding: 12px;
+    width: 50%;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    opacity: 0;
+    z-index: -1;
+    transition: .3s ease-in-out;
+}
+
+#question:hover ~.page_build_info{
+    z-index: 50;
+    opacity: 1;
+    color: black;
+}
+
 .menu .fas{
-    right: -1vw;
+    text-align: center;
     border-bottom: 3px solid black;
 }
 
@@ -89,15 +125,16 @@ body{
     flex-direction: column;
     justify-content: flex-end;
     background-color: black;
-    height: 100vh;
+    min-height: 110vh;
 }
 
-
+.head.active {
+    transform: translateY(-100%);
+}
 .head h1{
     padding-left: 10%;
     padding-top: 0%;
-    font-size: 12vw;
-    line-height: 0;
+    font-size: 124px;
     letter-spacing: 1vw;
     color: darkorange;
     text-shadow: 0px 0px 20px darkred;
@@ -107,13 +144,17 @@ body{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    justify-content: flex-end;
+    justify-content: center;
+    margin-bottom: 100px;
 }
 
 .next_page{
     position: fixed;
+    z-index: -1;
     top: 100%;
     left: 50%;
+    min-height: 100px;
+    min-width: 100px;
     width: 20vw;
     height: 20vw;
     border-radius: 50%;
@@ -128,27 +169,19 @@ body{
 }
 
 .head .left_p, .head .right_p{
-    position: absolute;
+    margin: 0px auto;
+    padding: 36px 0px;
+    display: inline-block;
+    max-width: 80vw;
     text-align: center; 
-    width: 80vw;
-    font-size: 1.5em;
-    top: 40%;
-    left: 50%;
-    transform: translateX(-50%);
+    font-size: 24px;
 }
 
 .head .border_mid{
-    position: absolute;
-    top: 55vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
-    width: 80%;
+    margin: 0px auto;
     border-bottom: 2px solid orange;
+    min-width: 80vw;
     box-shadow: 0px 0px 5px 1px darkred;
-}
-
-.head .right_p{
-    top: 60%;
 }
 
 .weird, .w_twinkle, .e_twinkle, .l_twinkle, .right_p, .left_p, .head{
@@ -164,8 +197,7 @@ span.com{
 }
 
 .head h1 .weird{
-    position: absolute;
-    transform-origin: 3.5vw 4vw;
+    position: relative;
     animation: broken 4s linear both;
 }
 
@@ -231,7 +263,6 @@ span.com{
         text-shadow: 0px 0px 20px darkred;
     }
     5%{
-        transform: rotate(10deg);
         color: black;
         text-shadow: 0 0 0;
     }
@@ -244,7 +275,6 @@ span.com{
         text-shadow: 0 0 0;
     }
     10%{
-        transform: rotate(30deg);
         color: black;
         text-shadow: 0 0 0;
     }
@@ -258,13 +288,11 @@ span.com{
     }
     85%{
         color: black;
-        text-shadow: 0 0 0;
-        transform: rotate(160deg);
+        text-shadow: 0 0 0;;
     }
     90%{
         color: darkorange;
         text-shadow: 0px 0px 20px darkred;
-        transform: rotate(190deg);
     }
     91%{
         color: black;
@@ -273,7 +301,6 @@ span.com{
     95%{
         color: darkorange;
         text-shadow: 0px 0px 20px darkred;
-        transform: rotate(184deg);
     }
     100%{
         transform: rotate(180deg);

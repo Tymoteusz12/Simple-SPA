@@ -30,7 +30,7 @@ const bannerParagraphs = {
 
     var bannerStatus = 1;
     var bannerStatusReverse;
-    const bannerTimer = 3000;
+    const bannerTimer = 4500;
     let active = false;
     let promise = false;
     let stateLoop = false;

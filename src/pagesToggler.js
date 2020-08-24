@@ -18,9 +18,9 @@ function clearThirdPage(){
 }
 
 export function toggleHomePage(){
+    setTimeout( () => $('.head').removeClass('active'), 600);
     $('.com').removeClass('active');
     $('.border_mid').removeClass('active');
-    $('body').removeClass('active');
     $('#weird').removeClass('weird');
     $(document).scrollTop(0);
     statesModule.clearStates();
@@ -28,6 +28,7 @@ export function toggleHomePage(){
 }
 
 export function toggleFirstPage(){
+    setTimeout( () => $('.head').addClass('active'), 500);
     $('.crucial').addClass('active');
     $('.crucial div:nth-child(2)').addClass('active');
     $('.com').addClass('active');
@@ -42,6 +43,7 @@ export function toggleFirstPage(){
 }
 
 export function toggleSecondPage(){
+    setTimeout( () => $('.head').addClass('active'), 500)
     $('.passion').addClass('active'); 
     $(document).scrollTop(0);
     setTimeout( () => clearFirstPage(), 500);
@@ -52,6 +54,7 @@ export function toggleSecondPage(){
 }
 
 export function toggleThirdPage(){
+    setTimeout( () => $('.head').addClass('active'), 500);
     $('.info').addClass('active');
     clearFirstPage();
     clearSecondPage();
@@ -60,6 +63,7 @@ export function toggleThirdPage(){
 }
 
 export function returnToHome(){
+    $('.head').removeClass('active');
     clearFirstPage();
     clearSecondPage();
     clearThirdPage();

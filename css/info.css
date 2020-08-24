@@ -2,12 +2,12 @@
     position: absolute;  
     overflow: hidden;
     text-align: center;
+    min-height: 130vh;
     width: 100vw;
-    height: 100vh;
     background-color: black;
     z-index: 1;
     top: 0;
-    left: -100vw;
+    transform: translateX(-100%);
     opacity: 0;
     transition: all .4s linear;
 }
@@ -15,91 +15,73 @@
 .info.active{
     top: 0;
     left: 0;
+    transform: translateX(0%);
     opacity: 1;
     z-index: 5;
 }
 
 .info h1{
-    font-size: 3em;
+    margin-top: 50px;
+    font-size: 46px;
 }
 
-.info .icons{
-    height: 50vh;
-    width: 70vw;
-    margin: 20vh auto;
-    display: flex; 
-    align-items: center;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-}
-
-.info .icons div{
-    display: flex;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    height: 33%;
-}
-
-.info .icons i{
-    padding: 0;
-    text-align: center;
-    position: relative;
-    z-index: 20;
-    width: 20%;
-    height: 100%;
+.info .icons .row{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.info .icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.info .icons i{
+    margin: 50px 0 100px 36px;
+    max-width: 100px;
+    padding: 0;
     font-size: 64px;
     color: white;
     text-shadow: 0px 0px 5px red;
     transition: .1s linear;
 }
 
-.info .icons div .hover_effect1, .info .icons div .hover_effect2, .info .icons div .hover_effect3{
-    position: absolute;
-    margin: auto;
+
+.info .icons .hover_effect1, .info .icons .hover_effect2, .info .icons .hover_effect3{
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    max-width: 600px;
+    max-height: 150px;
+    position: relative;
+    top: 0%;
+    left: 0%;
     z-index: 9;
     background-color: white;
-    transform: translateX(calc(-100% + 64px));
-    width: 50vw;
-    height: 60%;
+    transform: translate(100%, -25%);
     opacity: 0;
     transition: .3s ease-in-out;
 }
 
 .hover_effect1 h2, .hover_effect2 h2, .hover_effect3 h2{
-    width: 100%;
     font-weight: normal;
     color: black;
     text-align: center;
 }
 
-
-.info .icons .pseudo::before{
-    content: "";
-    position: absolute;
-    z-index: 10;
-    background-color: black;
-    width: 45vw;
-    height: 100%;
-    transform: translateX(calc(-40vw + 64px + 10%));
-} 
-
 .info .icons i:hover{
     cursor: pointer;
-    font-size: 76px;
     text-shadow: 0px 0px 100px red;
 }
 
 .info .icons i:nth-of-type(n):hover + div:nth-of-type(n){
-    transform: translate(calc(5vw + 10% + 128px), 0%);
+    transform: translate(2%, -25%);
     opacity: 0.8;
 }
 
 .info .icons div:nth-of-type(n).active{
-    transform: translate(calc(5vw + 10% + 128px), 0%);
+    transform: translate(1%, -25%);
     opacity: 0.8;
 }
 
@@ -114,17 +96,16 @@ span#portfolio:hover, span#github:hover{
 }
 
 .info .portfolio_slider, .info .github_slider{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     background-color: rgba(255, 255, 255, 0.8);
     color: black;
     font-size: 1.5em;
+    max-width: 1000px;
     top: 21%;
     left: 100%;
-    width: 70%;
-    height: 5%;
+    transform:translateX(50%);
+    margin: 30px 0px;
+    padding: 0 32px;
     transition: .5s ease-in-out;
 }
 
@@ -134,7 +115,7 @@ span#portfolio:hover, span#github:hover{
 }
 
 .info .github_slider{
-    top: 15%;
+    top: 5%;
 }
 
 .info .github_slider.active{
