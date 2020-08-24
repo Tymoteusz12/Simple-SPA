@@ -2,7 +2,7 @@ import * as statesModule from './states.js'
 
 function clearFirstPage(){
     $('.crucial').removeClass('active');
-    $('.crucial div:nth-child(2)').removeClass('active');
+    $('.js, .htmlcss, .arch, .python, .react, .git').removeClass('active');
 }
 
 function clearSecondPage(){
@@ -63,11 +63,11 @@ export function toggleThirdPage(){
 }
 
 export function returnToHome(){
-    $('.head').removeClass('active');
-    clearFirstPage();
+    $(document).scrollTop(0);
+    toggleHomePage();
+    setTimeout( () => clearFirstPage(), 500);
     clearSecondPage();
     clearThirdPage();
-    toggleHomePage();
     statesModule.clearStates();
     statesModule.states.homePageActive = true;
 }
