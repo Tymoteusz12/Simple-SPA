@@ -46,8 +46,8 @@ export function toggleSecondPage(){
     setTimeout( () => $('.head').addClass('active'), 500)
     $('.passion').addClass('active'); 
     $(document).scrollTop(0);
-    setTimeout( () => clearFirstPage(), 500);
-    setTimeout( () => clearThirdPage(), 500);
+    clearFirstPage();
+    clearThirdPage();
     clearThirdPage();
     statesModule.clearStates();
     statesModule.states.secondPageActive = true;
