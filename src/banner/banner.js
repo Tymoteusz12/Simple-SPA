@@ -1,3 +1,5 @@
+import * as statesModule from '../states';
+
 const imagesURL = {
     1: 'images/passions/astronomy.jpg',
     2: 'images/passions/cybersec.jpg',
@@ -37,13 +39,14 @@ const bannerParagraphs = {
     let stateReverseLoop = false;
     let currentImg = 1;
 
-    window.onload = function(){
-        bannerLoop();
-    };
-
     function setBannerInterval(){
-        return setInterval(() => (bannerLoop()), bannerTimer);
-    }
+        if(statesModule.states.secondPageActive){
+            return setInterval(() => (bannerLoop()), bannerTimer);
+        }
+        else{
+            clearInterval(startBannerLoop);
+        }
+     }
 
     let startBannerLoop = setBannerInterval();
 
