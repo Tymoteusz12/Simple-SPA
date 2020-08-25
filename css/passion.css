@@ -3,13 +3,14 @@
     overflow: hidden;
     text-align: center;
     min-height: 120vh;
+    letter-spacing: 1.2px;
     background-color: black;
     z-index: 1;
     top: 0;
     left: 0;
     transform:translateY(-100%);
     opacity: 0;
-    transition: all .4s linear;
+    transition: opacity .4s linear;
 }
 
 .passion.active{
@@ -23,7 +24,7 @@
 .passion h1{
     width: 80%;
     margin: 50px auto;
-    font-size: 48px;
+    font-size: 64px;
 }
 
 .passion h2:nth-of-type(2){
@@ -54,13 +55,13 @@
 }
 
 .button_left{
-    top: 50%;
+    top: 90%;
     left: 1%;
     transform: translate(0%, -50%);
 }
 
 .button_right{
-    top: 50%;
+    top: 90%;
     left: 99%;
     transform: translate(-100%, -50%);
 }
@@ -70,8 +71,10 @@
     margin: 30vh auto;
     position: relative;
     overflow: hidden;
-    width: 100vw;
+    width: calc(100vw - 22px);
     min-height: 300px;
+    height: 60vh;
+    box-shadow: 0px 0px 50px 5px white;
 }
 
 .imgban{
@@ -120,12 +123,12 @@
     height: 40%;
     margin: 2vh 0 1vh 0;
     padding: 0;
-    font-size: 32px;
+    font-size: 34px;
 }
 
 #imgban3_h3, #imgban2_h3, #imgban1_h3{
     flex-basis: 97%;
     margin: 0;
     padding: 16px;
-    font-size: 16px;
+    font-size: 18px;
 }

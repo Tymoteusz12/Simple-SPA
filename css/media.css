@@ -1,18 +1,11 @@
 @media (max-width: 800px) and (max-height: 900px){
     .head h1{
-        font-size: 46px;
+        margin-top: 10vh;
+        font-size: 80px;
     }
     
     .head .left_p, .head .right_p{  
-        font-size: 18px; 
-    }
-
-    head h1{
-        font-size: 46px;
-    }
-    
-    .head .left_p, .head .right_p{  
-        font-size: 18px; 
+        font-size: 24px; 
     }
 
     .crucial h1{
@@ -33,13 +26,5 @@
         width: 80%;
         margin: 50px auto;
         font-size: 36px;
-    }
-}
-
-@media (max-height: 600px){
-    .menu .menu_icons{
-        min-width: 200px;
-        font-size: 32px;
-        padding: 16px 0px;
     }
 }

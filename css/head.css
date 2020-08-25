@@ -1,9 +1,26 @@
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     padding: 0;
     margin: 0;
     color: darkorange;
     background-color: black;
+}
+
+::-webkit-scrollbar-track
+{
+	background-color: black;
+}
+
+::-webkit-scrollbar
+{
+	width: 22px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    border-radius: 11px;
+	background-color: orange;
 }
 
 .arrow{
@@ -39,8 +56,8 @@ body{
     justify-content: center;
     right: -300px;
     min-height: 100vh;
-    background-color: yellow;
-    box-shadow: 0px 0px 2px 2px darkred;
+    background-color: white;
+    box-shadow: 0px 0px 5px 2px white;
     transition: .2s linear;
 }
 
@@ -70,10 +87,11 @@ body{
     top: 2%;
     left: 2%;
     color: black;
-    background-color: gray;
+    background-color: orange;
     font-size: 32px;
     transition: .2s linear;
     cursor: pointer;
+    box-shadow: 0px 0px 20px 3px orange;
 }
 
 #question:hover{
@@ -124,7 +142,7 @@ body{
     flex-direction: column;
     justify-content: flex-end;
     background-color: black;
-    min-height: 110vh;
+    min-height: 100vh;
     transition: .4s linear;
 }
 
@@ -132,19 +150,25 @@ body{
     transform: translateY(-100%);
 }
 .head h1{
+    margin: 0 0 10vh 0;
     padding-left: 10%;
     padding-top: 0%;
-    font-size: 124px;
-    letter-spacing: 1vw;
+    font-size: 180px;
+    font-weight: normal;
+    letter-spacing: 1.5px;
     color: darkorange;
     text-shadow: 0px 0px 20px darkred;
+}
+
+.weird{
+    font-weight: normal;
 }
 
 .head .bottom{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    justify-content: center;
+    justify-content: flex-start;
     margin-bottom: 100px;
 }
 
@@ -175,13 +199,15 @@ body{
     max-width: 80vw;
     text-align: center; 
     font-size: 24px;
+    line-height: 130%;
+    letter-spacing: 1px;
 }
 
 .head .border_mid{
     margin: 0px auto;
     border-bottom: 2px solid orange;
     min-width: 80vw;
-    box-shadow: 0px 0px 5px 1px darkred;
+    box-shadow: 0px 0px 20px 5px orange;
 }
 
 .weird, .w_twinkle, .e_twinkle, .l_twinkle, .right_p, .left_p, .head{
@@ -216,22 +242,22 @@ span.com{
 
 @keyframes breathe{
     0%{
-        text-shadow: 0px 0px 0px green;
+        text-shadow: 0px 0px 0px orange;
     }
 
     30%{
-        text-shadow: 0px 0px 10px green;
+        text-shadow: 0px 0px 10px orange;
     }
 
     60%{
-        text-shadow: 0px 0px 10px green;
+        text-shadow: 0px 0px 10px orange;
     }
     90%{
-        text-shadow: 0px 0px 0px green;
+        text-shadow: 0px 0px 0px orange;
     }
 
     100%{
-        text-shadow: 0px 0px 0px green;
+        text-shadow: 0px 0px 0px orange;
     }
 }
 

@@ -56,6 +56,8 @@ export function toggleSecondPage(){
 export function toggleThirdPage(){
     setTimeout( () => $('.head').addClass('active'), 500);
     $('.info').addClass('active');
+    $('.hover_effect1').addClass('active');
+    $('.hover_effect2').addClass('active');
     clearFirstPage();
     clearSecondPage();
     statesModule.clearStates();
