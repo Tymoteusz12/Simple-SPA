@@ -7,11 +7,13 @@ body.active{
 span.com.active{
     position: relative;
     opacity: 1;
-    animation: twinkle .5s linear both;
+    -webkit-animation: twinkle .5s linear both;
+            animation: twinkle .5s linear both;
 }
 
 .border_mid.active{
-    animation: hide .4s linear both;
+    -webkit-animation: hide .4s linear both;
+            animation: hide .4s linear both;
 }
 
 .crucial{
@@ -34,7 +36,7 @@ span.com.active{
     flex-direction: column;
     justify-content: flex-start;
     align-content: flex-start;
-    animation: move_to 1s .6s linear both;
+    opacity: 1;
 }
 
 .cpp, .js, .htmlcss, .arch, .python, .react, .git{
@@ -103,7 +105,7 @@ span.com.active{
     text-align: center;
 }
 
-@keyframes twinkle{
+@-webkit-keyframes twinkle{
 
     10%{
         color: darkorange;
@@ -180,28 +182,79 @@ span.com.active{
     }
 }
 
-@keyframes hide{
-    100%{
-        min-width: 0%;
-        box-shadow: 0 0 0;
-    }
-}
+@keyframes twinkle{
 
-@keyframes move_to{
-    0%{
+    10%{
+        color: darkorange;
+        text-shadow: 0px 0px 20px darkred; 
+    }
+
+    11%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+
+    12%{
+        color: darkorange;
+        text-shadow: 0px 0px 20px darkred; 
+    }
+
+    13%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+
+    15%{
+        color: darkorange;
+        text-shadow: 0px 0px 20px darkred; 
+    }
+
+    16%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+
+    17%{
+        color: darkorange;
+        text-shadow: 0px 0px 20px darkred; 
+    }
+
+    18%{
+        color: black;
+        text-shadow: 0 0 0;
+    }
+
+    19%{
+        color: darkorange;
+        text-shadow: 0px 0px 20px darkred; 
+    }
+
+    23%{
+        color: darkorange;
+        text-shadow: 0px 0px 20px darkred; 
+    }
+    24%{
+        color: rgb(0, 0, 20);
+        text-shadow: 0 0 0;
+    }
+
+    50%{
+        color: rgb(0, 0, 20);
+        text-shadow: 0 0 0;
+    }
+    52%{
+        color: darkorange;
+        text-shadow: 0px 0px 20px darkred; 
+    }
+
+    54%{
+        color: rgb(0, 0, 20);
+        text-shadow: 0 0 0;
         opacity: 0;
     }
-
     100%{
-        opacity: 1;
-    }
-}
-
-@keyframes show{
-    0%{
+        color: rgb(0, 0, 20);
+        text-shadow: 0 0 0;
         opacity: 0;
-    }
-    100%{
-        opacity: 1;
     }
 }
