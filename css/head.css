@@ -143,10 +143,12 @@ body{
     justify-content: flex-end;
     background-color: black;
     min-height: 100vh;
-    transition: .4s linear;
+    opacity: 1;
+    transition: opacity .4s linear;
 }
 
 .head.active {
+    opacity: 0;
     transform: translateY(-100%);
 }
 .head h1{
