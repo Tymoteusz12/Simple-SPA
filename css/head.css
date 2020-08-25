@@ -150,7 +150,7 @@ body{
     transform: translateY(-100%);
 }
 .head h1{
-    margin: 0 0 10vh 0;
+    margin: 0 auto 10vh auto;
     padding-left: 10%;
     padding-top: 0%;
     font-size: 180px;
