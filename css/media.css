@@ -35,3 +35,11 @@
         font-size: 36px;
     }
 }
+
+@media (max-height: 600px){
+    .menu .menu_icons{
+        min-width: 200px;
+        font-size: 32px;
+        padding: 16px 0px;
+    }
+}
