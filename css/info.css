@@ -51,6 +51,10 @@
     margin-left: 35px;
 }
 
+.info .icons .fa-phone-square-alt{
+    margin-bottom: 100px;
+}
+
 .info .icons .hover_effect1, .info .icons .hover_effect2, .info .icons .hover_effect3{
     display: flex;
     align-items: center;
