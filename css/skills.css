@@ -12,8 +12,7 @@ span.com.active{
 }
 
 .border_mid.active{
-    -webkit-animation: hide .4s linear both;
-            animation: hide .4s linear both;
+    width: 0;
 }
 
 .crucial{
@@ -26,8 +25,9 @@ span.com.active{
     left: 0;
     transform: translateY(-100%);
     opacity: 0;
-    transition: .4s linear;
+    transition: opacity .4s linear;
 }
+
 
 .crucial.active{
     background-color: rgb(0, 0, 20);
@@ -37,6 +37,7 @@ span.com.active{
     justify-content: flex-start;
     align-content: flex-start;
     opacity: 1;
+    transition: opacity .4s linear;
 }
 
 .cpp, .js, .htmlcss, .arch, .python, .react, .git{

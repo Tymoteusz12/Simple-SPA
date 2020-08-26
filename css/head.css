@@ -35,8 +35,8 @@ body{
     transition: .2s linear;
     z-index: 11;
     font-size: 42px;
-    top: 6%;
-    right: 0%;
+    top: 2%;
+    right: 2%;
     -webkit-animation: breathe 8s linear both infinite;
             animation: breathe 8s linear both infinite;
     overflow: hidden;
@@ -45,8 +45,6 @@ body{
 .arrow.show{
     position: fixed;
     color: black;
-    text-shadow: 0px 0px 25px green;
-    transform: rotate(180deg);
 }
 
 .menu{
@@ -68,12 +66,34 @@ body{
     text-align: center;
     position: relative;
     font-size: 46px;
-    min-width: 300px;
     padding: 46px 0px;
+    width: 30%;
 }
 
-.menu .menu_icons:hover{
+.menu .bar{
     cursor: pointer;
+}
+
+.menu .bar{
+    display: flex;
+    min-width: 300px;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px solid black;
+}
+
+.menu p{
+    text-align: left;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: black;
+    padding-left: 20px;
+    width: 70%;
+}
+
+.menu .contactBar{
+    border-bottom: 3px solid black;
 }
 
 #question{
@@ -123,7 +143,6 @@ body{
 
 .menu .fas{
     text-align: center;
-    border-bottom: 3px solid black;
 }
 
 .menu #user{
@@ -153,8 +172,7 @@ body{
     transform: translateY(-100%);
 }
 .head h1{
-    margin: 0 auto 10vh auto;
-    padding-left: 10%;
+    margin: 10vh auto;
     padding-top: 0%;
     font-size: 180px;
     font-weight: normal;
@@ -210,8 +228,9 @@ body{
 .head .border_mid{
     margin: 0px auto;
     border-bottom: 2px solid orange;
-    min-width: 80vw;
+    width: 80vw;
     box-shadow: 0px 0px 20px 5px orange;
+    transition: .4s linear;
 }
 
 .weird, .w_twinkle, .e_twinkle, .l_twinkle, .right_p, .left_p, .head{
@@ -225,13 +244,6 @@ span.com{
 .border_mid, span.com{
     z-index: 3;
 }
-
-.head h1 .weird{
-    position: relative;
-    -webkit-animation: broken 4s linear both;
-            animation: broken 4s linear both;
-}
-
 
 .head h1 .w_twinkle{
     -webkit-animation: w_twinkle 8s 3s linear infinite;
@@ -331,112 +343,6 @@ span.com{
         box-shadow: 0px 0px 0px red;
     }
 }
-
-@-webkit-keyframes broken{
-    0%{
-        transform: rotate(0deg);
-        color: darkorange;
-        text-shadow: 0px 0px 20px darkred;
-    }
-    5%{
-        color: black;
-        text-shadow: 0 0 0;
-    }
-    6%{
-        color: darkorange;
-        text-shadow: 0px 0px 20px darkred;
-    }
-    7%{
-        color: black;
-        text-shadow: 0 0 0;
-    }
-    10%{
-        color: black;
-        text-shadow: 0 0 0;
-    }
-    11%{
-        color: darkorange;
-        text-shadow: 0px 0px 20px darkred;
-    }
-    12%{
-        color: black;
-        text-shadow: 0 0 0;
-    }
-    85%{
-        color: black;
-        text-shadow: 0 0 0;;
-    }
-    90%{
-        color: darkorange;
-        text-shadow: 0px 0px 20px darkred;
-    }
-    91%{
-        color: black;
-        text-shadow: 0 0 0;
-    }
-    95%{
-        color: darkorange;
-        text-shadow: 0px 0px 20px darkred;
-    }
-    100%{
-        transform: rotate(180deg);
-        color: black;
-        text-shadow: 0 0 0;
-    }
-}
-
-@keyframes broken{
-    0%{
-        transform: rotate(0deg);
-        color: darkorange;
-        text-shadow: 0px 0px 20px darkred;
-    }
-    5%{
-        color: black;
-        text-shadow: 0 0 0;
-    }
-    6%{
-        color: darkorange;
-        text-shadow: 0px 0px 20px darkred;
-    }
-    7%{
-        color: black;
-        text-shadow: 0 0 0;
-    }
-    10%{
-        color: black;
-        text-shadow: 0 0 0;
-    }
-    11%{
-        color: darkorange;
-        text-shadow: 0px 0px 20px darkred;
-    }
-    12%{
-        color: black;
-        text-shadow: 0 0 0;
-    }
-    85%{
-        color: black;
-        text-shadow: 0 0 0;;
-    }
-    90%{
-        color: darkorange;
-        text-shadow: 0px 0px 20px darkred;
-    }
-    91%{
-        color: black;
-        text-shadow: 0 0 0;
-    }
-    95%{
-        color: darkorange;
-        text-shadow: 0px 0px 20px darkred;
-    }
-    100%{
-        transform: rotate(180deg);
-        color: black;
-        text-shadow: 0 0 0;
-    }
-} 
 
 @-webkit-keyframes w_twinkle{
     1%{

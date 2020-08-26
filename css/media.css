@@ -13,13 +13,16 @@
     }
     
     .menu .menu_icons{
-        min-width: 200px;
         font-size: 32px;
         padding: 16px 0px;
     }
 
     .page_build_info{
         font-size: 16px;
+    }
+
+    .passion h1{
+        font-size: 42px;
     }
 
     .info h1{

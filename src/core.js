@@ -10,10 +10,10 @@ $('.next_page').on('click', pagesToggler.nextPage);
 $('.arrow i').on('click', showMenu);
 
 //page activation according to button
-$('.menu .fa-home').on('click', pagesToggler.returnToHome);
-$('.menu .fa-brain').on('click', pagesToggler.toggleFirstPage);
-$('.menu .fa-atom').on('click', pagesToggler.toggleSecondPage);
-$('.menu .fa-user-alt').on('click', pagesToggler.toggleThirdPage);
+$('.menu .homeBar').on('click', pagesToggler.returnToHome);
+$('.menu .skillsBar').on('click', pagesToggler.toggleFirstPage);
+$('.menu .passionsBar').on('click', pagesToggler.toggleSecondPage);
+$('.menu .contactBar').on('click', pagesToggler.toggleThirdPage);
 
 //second page onScroll toggle
 const windowHeight = $(window).height();
